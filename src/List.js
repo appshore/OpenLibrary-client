@@ -3,9 +3,9 @@ import React from 'react';
 const List = ({ list }) => (
   <div>
     {list && list.map(l => (
-      <div>
+      <div key={l.OLID} >
         <img src={`http://covers.openlibrary.org/b/OLID/${l.OLID}-S.jpg`} alt={l.title} />
-        &nbsp;<a key={l.OLID} href={`https://openlibrary.org/books/${l.OLID}`} target="_book">
+        &nbsp;<a href={`https://openlibrary.org/books/${l.OLID}`} target="_book">
           {l.title} - {l.authors}
         </a>
       </div>
